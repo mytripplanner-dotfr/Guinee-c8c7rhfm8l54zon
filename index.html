@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éveil Guinéen: De la Côte aux Montagnes du Fouta </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Conakry, la capitale vibrante</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Immersion dans le cœur de Conakry</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Évasion insulaire et détente côtière</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Route vers Kindia et les chutes de la Voile de la Mariée</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Exploration de Kindia et ses merveilles naturelles</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Vers le cœur du Fouta Djallon: Dalaba</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Cascades et paysages du Fouta Djallon</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Labé, capitale du Fouta Djallon</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Les environs de Labé et la Dame de Mali</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Les sources du Niger et les chutes de Kinkon</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 Retour vers la côte via Mamou</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Retour à Conakry et détente</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Art et culture à Conakry</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Derniers plaisirs guinéens et préparation au départ</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Départ de Conakry</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">GUINEE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Éveil Guinéen: De la Côte aux Montagnes du Fouta</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 1 au 16 Janvier 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 3900€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 25h depuis Michel, Mexique avec 2 escales</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Conakry, la capitale vibrante</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, l'arrivée à Conakry offre une première immersion dans l'ambiance guinéenne. Prenez le temps de vous installer et de vous imprégner des sons et des couleurs de cette ville côtière. Une balade légère permettra de se dégourdir les jambes et de commencer à découvrir les environs de votre hôtel, en toute tranquillité.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée à l'aéroport de Conakry (CKY)</strong>: Récupération des bagages et formalités douanières. Un chauffeur vous attendra pour vous conduire à votre hôtel.</li><li>🛏️ <strong>Installation à l'hôtel et repos</strong>: Prenez le temps de vous rafraîchir et de vous détendre après le vol. Profitez des commodités de l'hôtel pour un moment de calme.</li><li>🚶‍♂️ <strong>Première balade découverte des environs</strong>: Une promenade légère autour de l'hôtel pour s'acclimater au climat et à l'atmosphère locale. Observez la vie quotidienne qui s'anime dans les rues.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le trajet de l'aéroport au centre-ville de Conakry peut être long en raison du trafic. Prévoyez une bonne heure.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Changez un peu de monnaie locale (Franc Guinéen, GNF) à l'aéroport pour les petites dépenses immédiates.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Immersion dans le cœur de Conakry</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est dédiée à l'exploration des sites emblématiques de Conakry, offrant un aperçu de son histoire et de sa culture. Des marchés animés aux monuments historiques, la ville révèle ses multiples facettes. Préparez-vous à une expérience sensorielle riche, entre les couleurs vives et les saveurs locales.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏛️ <strong>Visite du Musée National de Guinée</strong>: Découvrez l'histoire et la culture guinéenne à travers une collection d'objets ethnographiques, d'instruments de musique et d'œuvres d'art traditionnelles.</li><li>🛍️ <strong>Exploration du Grand Marché de Madina</strong>: Plongez dans l'effervescence de l'un des plus grands marchés d'Afrique de l'Ouest. C'est une explosion de couleurs, d'odeurs et de sons, où l'on trouve de tout, des tissus aux épices.</li><li>🕌 <strong>Découverte de la Grande Mosquée de Conakry</strong>: Admirez l'architecture imposante de ce lieu de culte majeur, l'une des plus grandes mosquées d'Afrique. Respectez les codes vestimentaires appropriés pour la visite.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Sécurité au marché</p>
+                                <p class="text-gray-700">Soyez vigilant au marché de Madina, gardez vos objets de valeur en sécurité et évitez de montrer des signes extérieurs de richesse.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">Demandez toujours la permission avant de photographier les personnes, surtout dans les lieux de culte.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion insulaire et détente côtière</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après l'agitation de la ville, une escapade vers les îles de Loos offre une bouffée d'air frais et un cadre idyllique. Profitez des plages de sable fin, des eaux calmes et de l'ambiance paisible de ces îles. C'est l'occasion parfaite pour se détendre et savourer la beauté naturelle de la côte guinéenne.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚤 <strong>Excursion en pirogue vers les îles de Loos</strong>: Embarquez pour une traversée pittoresque vers ces îles paradisiaques, situées à quelques kilomètres de Conakry. Le trajet offre de belles vues sur la côte.</li><li>🏖️ <strong>Détente sur les plages de Kassa ou Room</strong>: Profitez du soleil et des eaux turquoise. Vous pouvez vous baigner, vous promener le long du rivage ou simplement vous relaxer sous les palmiers.</li><li>🍽️ <strong>Déjeuner de fruits de mer frais</strong>: Savourez un délicieux repas à base de poissons et fruits de mer fraîchement pêchés, préparés selon les recettes locales dans un restaurant de plage.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Horaires des bateaux</p>
+                                <p class="text-gray-700">Les départs pour les îles de Loos se font généralement le matin. Renseignez-vous sur les horaires de retour pour ne pas être bloqué.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☀️ Protection solaire</p>
+                                <p class="text-gray-700">Le soleil est intense sur les îles. N'oubliez pas crème solaire, chapeau et lunettes de soleil.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Route vers Kindia et les chutes de la Voile de la Mariée</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, le voyage prend une tournure plus naturelle avec la route vers Kindia, porte d'entrée du Fouta Djallon. La découverte des célèbres chutes de la Voile de la Mariée est un moment fort, offrant un spectacle rafraîchissant et apaisant. C'est une transition douce vers les paysages verdoyants de l'intérieur du pays.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Départ de Conakry pour Kindia</strong>: Un trajet d'environ 3 heures vous mènera à Kindia, une ville agréable réputée pour ses paysages naturels. Profitez des vues sur la campagne guinéenne.</li><li>💧 <strong>Visite des Chutes de la Voile de la Mariée</strong>: Admirez cette magnifique cascade dont les eaux s'écoulent en fines nappes, évoquant un voile de mariée. C'est un lieu idéal pour la photographie et la détente.</li><li>🚶‍♀️ <strong>Petite randonnée autour des chutes</strong>: Explorez les sentiers environnants pour découvrir différents points de vue sur les chutes et la végétation luxuriante. Une balade facile et agréable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛣️ État des routes</p>
+                                <p class="text-gray-700">Les routes en Guinée peuvent être en état variable. Prévoyez des retards possibles et un véhicule adapté.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Chaussures</p>
+                                <p class="text-gray-700">Portez des chaussures confortables et antidérapantes pour la marche autour des chutes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Exploration de Kindia et ses merveilles naturelles</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Kindia continue de révéler ses trésors naturels avec la visite du Mont Gangan et de la Grotte de Kakimbon. Ces sites offrent des panoramas spectaculaires et une immersion dans les légendes locales. La journée est un mélange d'aventure et de découverte culturelle, au cœur d'une nature préservée.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌄 <strong>Ascension du Mont Gangan</strong>: Randonnée vers le sommet du Mont Gangan pour profiter d'une vue panoramique imprenable sur Kindia et ses environs. L'effort est récompensé par un paysage à couper le souffle.</li><li>🦇 <strong>Exploration de la Grotte de Kakimbon</strong>: Visitez cette grotte mystérieuse, abritant des colonies de chauves-souris et imprégnée de légendes locales. Un guide local est recommandé pour une meilleure expérience.</li><li>🚶‍♂️ <strong>Balade au marché local de Kindia</strong>: Flânez dans le marché de Kindia pour observer la vie locale, acheter des produits frais ou des souvenirs artisanaux. C'est une ambiance plus authentique qu'à Conakry.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Guides locaux</p>
+                                <p class="text-gray-700">Engager un guide local pour le Mont Gangan et la Grotte de Kakimbon est fortement recommandé pour la sécurité et les explications culturelles.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🔦 Équipement</p>
+                                <p class="text-gray-700">Prévoyez une lampe frontale pour la Grotte de Kakimbon, car l'éclairage peut être limité.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vers le cœur du Fouta Djallon: Dalaba</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le voyage se poursuit vers Dalaba, une ville perchée au cœur du Fouta Djallon, réputée pour son climat frais et ses paysages montagneux. La route offre des vues spectaculaires sur les plateaux et les vallées. L'après-midi sera consacrée à la découverte de l'architecture coloniale et des jardins luxuriants de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Trajet de Kindia à Dalaba</strong>: Environ 4-5 heures de route à travers des paysages de plus en plus montagneux et verdoyants. C'est une belle occasion d'admirer la diversité des paysages guinéens.</li><li>🛏️ <strong>Installation à l'hôtel à Dalaba</strong>: Profitez de l'air frais de la montagne et installez-vous dans votre hébergement. Dalaba est connue pour son atmosphère paisible.</li><li>🏡 <strong>Visite de la Villa Séréna et des jardins</strong>: Découvrez cette ancienne résidence coloniale et ses magnifiques jardins, offrant une vue imprenable sur les environs. Un lieu chargé d'histoire et de sérénité.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌡️ Climat</p>
+                                <p class="text-gray-700">Le Fouta Djallon a un climat plus frais que la côte, surtout le soir. Prévoyez une petite laine.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌿 Nature</p>
+                                <p class="text-gray-700">Les paysages du Fouta Djallon sont propices à la randonnée. Gardez l'œil ouvert pour la faune et la flore.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cascades et paysages du Fouta Djallon</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est dédiée à l'exploration des merveilles naturelles autour de Dalaba, avec des randonnées vers des cascades cachées et des points de vue panoramiques. Le Fouta Djallon est un paradis pour les amoureux de la nature, offrant des paysages sculptés par l'eau et le temps. Une immersion totale dans la beauté de la Guinée.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏞️ <strong>Randonnée vers la cascade de Ditinn</strong>: Partez pour une marche à travers des villages et des champs pour atteindre cette belle cascade. Profitez de la fraîcheur de l'eau et du cadre paisible.</li><li>🚶‍♂️ <strong>Découverte des ponts naturels de Dalaba</strong>: Explorez les environs pour admirer les formations rocheuses uniques qui forment des ponts naturels, témoignages de la puissance de l'érosion.</li><li>🌅 <strong>Coucher de soleil sur les montagnes du Fouta</strong>: Trouvez un point de vue élevé pour admirer le spectacle du soleil se couchant sur les plateaux et les vallées du Fouta Djallon. Un moment magique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗺️ Orientation</p>
+                                <p class="text-gray-700">Un guide local est essentiel pour les randonnées afin de ne pas se perdre et de découvrir les meilleurs spots.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Hydratation</p>
+                                <p class="text-gray-700">Emportez suffisamment d'eau pour les randonnées, même si le climat est plus frais.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Labé, capitale du Fouta Djallon</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Direction Labé, la plus grande ville du Fouta Djallon et un centre culturel important. La journée sera consacrée à la découverte de son marché animé, de son artisanat et de son ambiance unique. C'est une immersion plus profonde dans la culture peule, avec des rencontres authentiques et des découvertes fascinantes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Trajet de Dalaba à Labé</strong>: Un court trajet d'environ 1h30 vous mènera à Labé. Profitez des paysages changeants et de l'arrivée dans cette ville dynamique.</li><li>🛍️ <strong>Visite du grand marché de Labé</strong>: Explorez ce marché réputé pour son artisanat local, notamment les articles en cuir, les bijoux et les tissus. C'est l'endroit idéal pour trouver des souvenirs authentiques.</li><li>🤝 <strong>Rencontre avec des artisans locaux</strong>: Observez les artisans au travail et apprenez-en davantage sur leurs techniques traditionnelles. C'est une opportunité d'échanger et de comprendre leur savoir-faire.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">N'hésitez pas à négocier les prix au marché, c'est une pratique courante en Guinée.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🗣️ Langue</p>
+                                <p class="text-gray-700">Le Pular est la langue dominante dans le Fouta Djallon. Quelques mots de salutation seront très appréciés.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Les environs de Labé et la Dame de Mali</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Les environs de Labé regorgent de sites naturels et de curiosités géologiques. La journée sera consacrée à une excursion vers la célèbre Dame de Mali, une formation rocheuse intrigante, et à l'exploration des paysages environnants. C'est une journée d'aventure et de découverte des légendes locales.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🗿 <strong>Excursion vers la Dame de Mali</strong>: Partez à la découverte de cette formation rocheuse naturelle qui ressemble à une femme. Le site est entouré de légendes et offre un cadre pittoresque.</li><li>🚶‍♀️ <strong>Randonnée dans les paysages du Fouta</strong>: Profitez des sentiers pour explorer les collines et les vallées autour de Mali. Les vues sont magnifiques et l'air pur est vivifiant.</li><li>🏘️ <strong>Visite d'un village peul traditionnel</strong>: Rencontrez les habitants, découvrez leur mode de vie et partagez un moment d'échange culturel. Une expérience authentique et enrichissante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🤝 Respect culturel</p>
+                                <p class="text-gray-700">Lors des visites de villages, demandez toujours la permission avant de prendre des photos et respectez les coutumes locales.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Petits cadeaux</p>
+                                <p class="text-gray-700">De petits cadeaux (crayons, cahiers) pour les enfants des villages sont souvent appréciés, mais ne sont pas obligatoires.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Les sources du Niger et les chutes de Kinkon</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est dédiée à la découverte de sites naturels emblématiques, notamment les sources du fleuve Niger et les impressionnantes chutes de Kinkon. C'est une immersion dans la géographie unique de la Guinée, où naissent de grands fleuves africains. Préparez-vous à des paysages grandioses et des moments de contemplation.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🌊 <strong>Visite des sources du fleuve Niger</strong>: Rendez-vous à Faranah pour voir les sources de l'un des plus grands fleuves d'Afrique. C'est un lieu symbolique et paisible, marquant le début d'un long voyage aquatique.</li><li>💧 <strong>Découverte des Chutes de Kinkon</strong>: Admirez la puissance de ces chutes spectaculaires, l'une des plus impressionnantes de Guinée. Le site offre des vues magnifiques et la possibilité de se rafraîchir.</li><li>🚶‍♂️ <strong>Balade autour des chutes et pique-nique</strong>: Profitez des environs des chutes pour une promenade relaxante et un pique-nique au bord de l'eau, au son des cascades.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Accès</p>
+                                <p class="text-gray-700">L'accès aux sources du Niger et aux chutes de Kinkon peut nécessiter un véhicule 4x4, surtout en saison des pluies.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">♻️ Environnement</p>
+                                <p class="text-gray-700">Veillez à ne laisser aucun déchet derrière vous pour préserver la beauté naturelle de ces sites.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour vers la côte via Mamou</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le voyage entame son chemin de retour vers la côte, avec une étape à Mamou, une ville carrefour importante. C'est l'occasion de traverser de nouveaux paysages et de ressentir l'évolution de l'ambiance à mesure que l'on quitte les montagnes. Une journée de transition, ponctuée par la découverte d'un marché local.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Trajet de Labé à Mamou</strong>: Environ 3-4 heures de route. Mamou est une ville animée, un point de convergence pour les commerçants et les voyageurs.</li><li>🛏️ <strong>Installation à l'hôtel à Mamou</strong>: Prenez le temps de vous reposer après le trajet. Mamou offre des options d'hébergement simples mais confortables.</li><li>🛍️ <strong>Visite du marché de Mamou</strong>: Explorez le marché local, moins touristique que ceux de Conakry ou Labé, pour une immersion authentique dans la vie quotidienne guinéenne.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⛽ Carburant</p>
+                                <p class="text-gray-700">Mamou est un bon point pour faire le plein de carburant et de provisions avant de continuer vers Conakry.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍲 Cuisine locale</p>
+                                <p class="text-gray-700">Profitez de Mamou pour goûter des plats locaux dans de petits restaurants de rue, souvent délicieux et économiques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à Conakry et détente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Le long trajet de retour vers Conakry marque la fin de l'exploration du Fouta Djallon. Après l'arrivée, la journée sera dédiée à la détente et à la préparation des derniers jours. C'est l'occasion de se remémorer les aventures vécues et de profiter d'un moment de calme avant de reprendre le rythme de la capitale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🚗 <strong>Long trajet de Mamou à Conakry</strong>: Environ 5-6 heures de route. Prévoyez des pauses régulières pour vous dégourdir les jambes et admirer les paysages.</li><li>🛏️ <strong>Installation à l'hôtel à Conakry</strong>: Retrouvez le confort de la capitale et installez-vous dans votre hébergement pour les dernières nuits.</li><li>💆‍♀️ <strong>Soirée libre et détente</strong>: Profitez d'une soirée tranquille à l'hôtel ou dans un restaurant calme pour vous reposer et vous préparer aux dernières découvertes.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📚 Lecture</p>
+                                <p class="text-gray-700">Prévoyez un livre ou de la musique pour les longs trajets en voiture.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🔋 Recharge</p>
+                                <p class="text-gray-700">Profitez de l'hôtel pour recharger tous vos appareils électroniques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art et culture à Conakry</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Cette journée est consacrée à l'approfondissement de la scène artistique et culturelle de Conakry. De l'artisanat local aux galeries d'art, la ville révèle son dynamisme créatif. C'est l'occasion de trouver des souvenirs uniques et de rencontrer des artistes locaux, tout en profitant de l'ambiance de la capitale.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎨 <strong>Visite du Centre Culturel Franco-Guinéen</strong>: Découvrez les expositions d'art local, assistez à des spectacles ou participez à des ateliers. C'est un lieu vibrant d'échanges culturels.</li><li>🛍️ <strong>Shopping d'artisanat au marché de N'Zérékoré</strong>: Moins connu que Madina, ce marché offre une sélection intéressante d'artisanat, notamment des sculptures sur bois, des masques et des bijoux.</li><li>🎶 <strong>Soirée musique live ou danse traditionnelle</strong>: Si possible, assistez à un concert de musique guinéenne ou à une représentation de danse traditionnelle pour une immersion complète dans la culture locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎭 Événements</p>
+                                <p class="text-gray-700">Renseignez-vous sur les événements culturels en cours au Centre Culturel Franco-Guinéen ou auprès de votre hôtel.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💰 Achats</p>
+                                <p class="text-gray-700">Prévoyez de la monnaie locale pour les achats d'artisanat, les petits commerçants préfèrent le liquide.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers plaisirs guinéens et préparation au départ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée complète pour savourer les saveurs locales, faire les derniers achats et vous imprégner une dernière fois de l'ambiance de Conakry. C'est aussi le moment de préparer tranquillement votre départ, en vous assurant que tout est prêt pour le voyage de retour. Une journée douce pour clore ce magnifique périple.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍽️ <strong>Déjeuner dans un restaurant local réputé</strong>: Goûtez une dernière fois aux spécialités guinéennes comme le riz gras, le poulet yassa ou le foutou. Demandez des recommandations à votre hôtel.</li><li>🛍️ <strong>Derniers achats de souvenirs ou de produits locaux</strong>: Flânez dans les boutiques ou les marchés pour trouver les derniers cadeaux ou des épices à rapporter chez vous.</li><li>📦 <strong>Préparation des bagages et soirée libre</strong>: Organisez vos affaires pour le départ. Profitez d'une dernière soirée tranquille, peut-être avec un dîner d'adieu.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌶️ Gastronomie</p>
+                                <p class="text-gray-700">N'hésitez pas à demander si les plats sont épicés si vous n'êtes pas habitué aux saveurs fortes.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Confirmation vol</p>
+                                <p class="text-gray-700">Confirmez les détails de votre vol de retour et l'heure de votre transfert vers l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Conakry</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le jour du départ, marquant la fin de votre aventure guinéenne. Après un dernier petit-déjeuner, un transfert vous conduira à l'aéroport. Emportez avec vous les souvenirs inoubliables des paysages, des rencontres et de la culture vibrante de la Guinée. Un voyage riche en émotions et en découvertes s'achève.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🍳 <strong>Petit-déjeuner à l'hôtel</strong>: Profitez d'un dernier repas guinéen avant de prendre la route pour l'aéroport.</li><li>🚗 <strong>Transfert vers l'aéroport international de Conakry (CKY)</strong>: Un chauffeur vous conduira à l'aéroport en fonction de l'heure de votre vol. Prévoyez une marge de temps suffisante.</li><li>🛫 <strong>Enregistrement et vol retour</strong>: Effectuez les formalités d'enregistrement et embarquez pour votre vol de retour, la tête pleine de souvenirs.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Guinee-c8c7rhfm8l54zon/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Heure de départ</p>
+                                <p class="text-gray-700">Arrivez à l'aéroport au moins 3 heures avant l'heure de votre vol international.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛂 Documents</p>
+                                <p class="text-gray-700">Assurez-vous d'avoir tous vos documents de voyage (passeport, visa, billet d'avion) à portée de main.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>1500€/pers (Vol aller-retour Michel, Mexique - Conakry en classe économique avec escales)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>750€/pers (Location de voiture avec chauffeur pour 12 jours, taxis locaux, transferts aéroport)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>375€/pers (15 jours x 25€/jour pour repas dans restaurants de gamme moyenne)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>975€/pers (15 nuits x 65€/nuit en hôtels 3 étoiles)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>300€/pers (Entrées sites, guides locaux, excursions îles de Loos)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de novembre à avril, correspondant à la saison sèche.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Janvier offre un climat agréable, avec des températures modérées et peu de précipitations, idéal pour l'exploration.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🌍 La Guinée est un pays d'Afrique de l'Ouest, riche en ressources naturelles et en diversité ethnique. La population est majoritairement jeune et très accueillante.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ La langue officielle est le français, mais de nombreuses langues locales sont parlées, notamment le Pular, le Malinké et le Soussou.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💰 Le Franc Guinéen (GNF) est la monnaie locale. Les cartes de crédit sont rarement acceptées en dehors des grands hôtels de Conakry. Prévoyez du liquide.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🛂 Un visa est obligatoire pour entrer en Guinée. Il doit être obtenu avant le départ auprès de l'ambassade ou du consulat de Guinée.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Guinee-c8c7rhfm8l54zon/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/pays/guinee/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Ministère de l'Europe et des Affaires étrangères</strong></a></li>
+                    
+                        <li><a href="https://www.meteofrance.com/previsions-meteo-monde/conakry/GNXX0001" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo France International</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
