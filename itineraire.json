@@ -1,0 +1,457 @@
+{
+  "pays": "Guinée",
+  "drapeau": "🇬🇳",
+  "symbole": "🐘",
+  "titre": "Éveil Guinéen: De la Côte aux Montagnes du Fouta",
+  "budget_total": "3900€",
+  "duree": "15 jours",
+  "date_debut": "2026-01-01",
+  "date_fin": "2026-01-16",
+  "temps_vol": "25h depuis Michel, Mexique avec 2 escales",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Conakry, la capitale vibrante",
+      "legende": "Après un long voyage, l'arrivée à Conakry offre une première immersion dans l'ambiance guinéenne. Prenez le temps de vous installer et de vous imprégner des sons et des couleurs de cette ville côtière. Une balade légère permettra de se dégourdir les jambes et de commencer à découvrir les environs de votre hôtel, en toute tranquillité.",
+      "lieu": "Conakry",
+      "activites": [
+        "🛬 <strong>Arrivée à l'aéroport de Conakry (CKY)</strong>: Récupération des bagages et formalités douanières. Un chauffeur vous attendra pour vous conduire à votre hôtel.",
+        "🛏️ <strong>Installation à l'hôtel et repos</strong>: Prenez le temps de vous rafraîchir et de vous détendre après le vol. Profitez des commodités de l'hôtel pour un moment de calme.",
+        "🚶‍♂️ <strong>Première balade découverte des environs</strong>: Une promenade légère autour de l'hôtel pour s'acclimater au climat et à l'atmosphère locale. Observez la vie quotidienne qui s'anime dans les rues."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le trajet de l'aéroport au centre-ville de Conakry peut être long en raison du trafic. Prévoyez une bonne heure."
+        },
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Changez un peu de monnaie locale (Franc Guinéen, GNF) à l'aéroport pour les petites dépenses immédiates."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": " bustling_city",
+      "titre": "Immersion dans le cœur de Conakry",
+      "legende": "Cette journée est dédiée à l'exploration des sites emblématiques de Conakry, offrant un aperçu de son histoire et de sa culture. Des marchés animés aux monuments historiques, la ville révèle ses multiples facettes. Préparez-vous à une expérience sensorielle riche, entre les couleurs vives et les saveurs locales.",
+      "lieu": "Conakry",
+      "activites": [
+        "🏛️ <strong>Visite du Musée National de Guinée</strong>: Découvrez l'histoire et la culture guinéenne à travers une collection d'objets ethnographiques, d'instruments de musique et d'œuvres d'art traditionnelles.",
+        "🛍️ <strong>Exploration du Grand Marché de Madina</strong>: Plongez dans l'effervescence de l'un des plus grands marchés d'Afrique de l'Ouest. C'est une explosion de couleurs, d'odeurs et de sons, où l'on trouve de tout, des tissus aux épices.",
+        "🕌 <strong>Découverte de la Grande Mosquée de Conakry</strong>: Admirez l'architecture imposante de ce lieu de culte majeur, l'une des plus grandes mosquées d'Afrique. Respectez les codes vestimentaires appropriés pour la visite."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Sécurité au marché",
+          "texte": "Soyez vigilant au marché de Madina, gardez vos objets de valeur en sécurité et évitez de montrer des signes extérieurs de richesse."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "Demandez toujours la permission avant de photographier les personnes, surtout dans les lieux de culte."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏝️",
+      "titre": "Évasion insulaire et détente côtière",
+      "legende": "Après l'agitation de la ville, une escapade vers les îles de Loos offre une bouffée d'air frais et un cadre idyllique. Profitez des plages de sable fin, des eaux calmes et de l'ambiance paisible de ces îles. C'est l'occasion parfaite pour se détendre et savourer la beauté naturelle de la côte guinéenne.",
+      "lieu": "Îles de Loos (depuis Conakry)",
+      "activites": [
+        "🚤 <strong>Excursion en pirogue vers les îles de Loos</strong>: Embarquez pour une traversée pittoresque vers ces îles paradisiaques, situées à quelques kilomètres de Conakry. Le trajet offre de belles vues sur la côte.",
+        "🏖️ <strong>Détente sur les plages de Kassa ou Room</strong>: Profitez du soleil et des eaux turquoise. Vous pouvez vous baigner, vous promener le long du rivage ou simplement vous relaxer sous les palmiers.",
+        "🍽️ <strong>Déjeuner de fruits de mer frais</strong>: Savourez un délicieux repas à base de poissons et fruits de mer fraîchement pêchés, préparés selon les recettes locales dans un restaurant de plage."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Horaires des bateaux",
+          "texte": "Les départs pour les îles de Loos se font généralement le matin. Renseignez-vous sur les horaires de retour pour ne pas être bloqué."
+        },
+        {
+          "symbole": "☀️",
+          "titre": "Protection solaire",
+          "texte": "Le soleil est intense sur les îles. N'oubliez pas crème solaire, chapeau et lunettes de soleil."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏞️",
+      "titre": "Route vers Kindia et les chutes de la Voile de la Mariée",
+      "legende": "Aujourd'hui, le voyage prend une tournure plus naturelle avec la route vers Kindia, porte d'entrée du Fouta Djallon. La découverte des célèbres chutes de la Voile de la Mariée est un moment fort, offrant un spectacle rafraîchissant et apaisant. C'est une transition douce vers les paysages verdoyants de l'intérieur du pays.",
+      "lieu": "Kindia",
+      "activites": [
+        "🚗 <strong>Départ de Conakry pour Kindia</strong>: Un trajet d'environ 3 heures vous mènera à Kindia, une ville agréable réputée pour ses paysages naturels. Profitez des vues sur la campagne guinéenne.",
+        "💧 <strong>Visite des Chutes de la Voile de la Mariée</strong>: Admirez cette magnifique cascade dont les eaux s'écoulent en fines nappes, évoquant un voile de mariée. C'est un lieu idéal pour la photographie et la détente.",
+        "🚶‍♀️ <strong>Petite randonnée autour des chutes</strong>: Explorez les sentiers environnants pour découvrir différents points de vue sur les chutes et la végétation luxuriante. Une balade facile et agréable."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🛣️",
+          "titre": "État des routes",
+          "texte": "Les routes en Guinée peuvent être en état variable. Prévoyez des retards possibles et un véhicule adapté."
+        },
+        {
+          "symbole": "👟",
+          "titre": "Chaussures",
+          "texte": "Portez des chaussures confortables et antidérapantes pour la marche autour des chutes."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "⛰️",
+      "titre": "Exploration de Kindia et ses merveilles naturelles",
+      "legende": "Kindia continue de révéler ses trésors naturels avec la visite du Mont Gangan et de la Grotte de Kakimbon. Ces sites offrent des panoramas spectaculaires et une immersion dans les légendes locales. La journée est un mélange d'aventure et de découverte culturelle, au cœur d'une nature préservée.",
+      "lieu": "Kindia",
+      "activites": [
+        "🌄 <strong>Ascension du Mont Gangan</strong>: Randonnée vers le sommet du Mont Gangan pour profiter d'une vue panoramique imprenable sur Kindia et ses environs. L'effort est récompensé par un paysage à couper le souffle.",
+        "🦇 <strong>Exploration de la Grotte de Kakimbon</strong>: Visitez cette grotte mystérieuse, abritant des colonies de chauves-souris et imprégnée de légendes locales. Un guide local est recommandé pour une meilleure expérience.",
+        "🚶‍♂️ <strong>Balade au marché local de Kindia</strong>: Flânez dans le marché de Kindia pour observer la vie locale, acheter des produits frais ou des souvenirs artisanaux. C'est une ambiance plus authentique qu'à Conakry."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🗣️",
+          "titre": "Guides locaux",
+          "texte": "Engager un guide local pour le Mont Gangan et la Grotte de Kakimbon est fortement recommandé pour la sécurité et les explications culturelles."
+        },
+        {
+          "symbole": "🔦",
+          "titre": "Équipement",
+          "texte": "Prévoyez une lampe frontale pour la Grotte de Kakimbon, car l'éclairage peut être limité."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🏞️",
+      "titre": "Vers le cœur du Fouta Djallon: Dalaba",
+      "legende": "Le voyage se poursuit vers Dalaba, une ville perchée au cœur du Fouta Djallon, réputée pour son climat frais et ses paysages montagneux. La route offre des vues spectaculaires sur les plateaux et les vallées. L'après-midi sera consacrée à la découverte de l'architecture coloniale et des jardins luxuriants de la ville.",
+      "lieu": "Dalaba",
+      "activites": [
+        "🚗 <strong>Trajet de Kindia à Dalaba</strong>: Environ 4-5 heures de route à travers des paysages de plus en plus montagneux et verdoyants. C'est une belle occasion d'admirer la diversité des paysages guinéens.",
+        "🛏️ <strong>Installation à l'hôtel à Dalaba</strong>: Profitez de l'air frais de la montagne et installez-vous dans votre hébergement. Dalaba est connue pour son atmosphère paisible.",
+        "🏡 <strong>Visite de la Villa Séréna et des jardins</strong>: Découvrez cette ancienne résidence coloniale et ses magnifiques jardins, offrant une vue imprenable sur les environs. Un lieu chargé d'histoire et de sérénité."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🌡️",
+          "titre": "Climat",
+          "texte": "Le Fouta Djallon a un climat plus frais que la côte, surtout le soir. Prévoyez une petite laine."
+        },
+        {
+          "symbole": "🌿",
+          "titre": "Nature",
+          "texte": "Les paysages du Fouta Djallon sont propices à la randonnée. Gardez l'œil ouvert pour la faune et la flore."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "💧",
+      "titre": "Cascades et paysages du Fouta Djallon",
+      "legende": "Cette journée est dédiée à l'exploration des merveilles naturelles autour de Dalaba, avec des randonnées vers des cascades cachées et des points de vue panoramiques. Le Fouta Djallon est un paradis pour les amoureux de la nature, offrant des paysages sculptés par l'eau et le temps. Une immersion totale dans la beauté de la Guinée.",
+      "lieu": "Dalaba",
+      "activites": [
+        "🏞️ <strong>Randonnée vers la cascade de Ditinn</strong>: Partez pour une marche à travers des villages et des champs pour atteindre cette belle cascade. Profitez de la fraîcheur de l'eau et du cadre paisible.",
+        "🚶‍♂️ <strong>Découverte des ponts naturels de Dalaba</strong>: Explorez les environs pour admirer les formations rocheuses uniques qui forment des ponts naturels, témoignages de la puissance de l'érosion.",
+        "🌅 <strong>Coucher de soleil sur les montagnes du Fouta</strong>: Trouvez un point de vue élevé pour admirer le spectacle du soleil se couchant sur les plateaux et les vallées du Fouta Djallon. Un moment magique."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🗺️",
+          "titre": "Orientation",
+          "texte": "Un guide local est essentiel pour les randonnées afin de ne pas se perdre et de découvrir les meilleurs spots."
+        },
+        {
+          "symbole": "💧",
+          "titre": "Hydratation",
+          "texte": "Emportez suffisamment d'eau pour les randonnées, même si le climat est plus frais."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": " cultural_heritage",
+      "titre": "Labé, capitale du Fouta Djallon",
+      "legende": "Direction Labé, la plus grande ville du Fouta Djallon et un centre culturel important. La journée sera consacrée à la découverte de son marché animé, de son artisanat et de son ambiance unique. C'est une immersion plus profonde dans la culture peule, avec des rencontres authentiques et des découvertes fascinantes.",
+      "lieu": "Labé",
+      "activites": [
+        "🚗 <strong>Trajet de Dalaba à Labé</strong>: Un court trajet d'environ 1h30 vous mènera à Labé. Profitez des paysages changeants et de l'arrivée dans cette ville dynamique.",
+        "🛍️ <strong>Visite du grand marché de Labé</strong>: Explorez ce marché réputé pour son artisanat local, notamment les articles en cuir, les bijoux et les tissus. C'est l'endroit idéal pour trouver des souvenirs authentiques.",
+        "🤝 <strong>Rencontre avec des artisans locaux</strong>: Observez les artisans au travail et apprenez-en davantage sur leurs techniques traditionnelles. C'est une opportunité d'échanger et de comprendre leur savoir-faire."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "N'hésitez pas à négocier les prix au marché, c'est une pratique courante en Guinée."
+        },
+        {
+          "symbole": "🗣️",
+          "titre": "Langue",
+          "texte": "Le Pular est la langue dominante dans le Fouta Djallon. Quelques mots de salutation seront très appréciés."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🏞️",
+      "titre": "Les environs de Labé et la Dame de Mali",
+      "legende": "Les environs de Labé regorgent de sites naturels et de curiosités géologiques. La journée sera consacrée à une excursion vers la célèbre Dame de Mali, une formation rocheuse intrigante, et à l'exploration des paysages environnants. C'est une journée d'aventure et de découverte des légendes locales.",
+      "lieu": "Labé",
+      "activites": [
+        "🗿 <strong>Excursion vers la Dame de Mali</strong>: Partez à la découverte de cette formation rocheuse naturelle qui ressemble à une femme. Le site est entouré de légendes et offre un cadre pittoresque.",
+        "🚶‍♀️ <strong>Randonnée dans les paysages du Fouta</strong>: Profitez des sentiers pour explorer les collines et les vallées autour de Mali. Les vues sont magnifiques et l'air pur est vivifiant.",
+        "🏘️ <strong>Visite d'un village peul traditionnel</strong>: Rencontrez les habitants, découvrez leur mode de vie et partagez un moment d'échange culturel. Une expérience authentique et enrichissante."
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🤝",
+          "titre": "Respect culturel",
+          "texte": "Lors des visites de villages, demandez toujours la permission avant de prendre des photos et respectez les coutumes locales."
+        },
+        {
+          "symbole": "🎁",
+          "titre": "Petits cadeaux",
+          "texte": "De petits cadeaux (crayons, cahiers) pour les enfants des villages sont souvent appréciés, mais ne sont pas obligatoires."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "💧",
+      "titre": "Les sources du Niger et les chutes de Kinkon",
+      "legende": "Cette journée est dédiée à la découverte de sites naturels emblématiques, notamment les sources du fleuve Niger et les impressionnantes chutes de Kinkon. C'est une immersion dans la géographie unique de la Guinée, où naissent de grands fleuves africains. Préparez-vous à des paysages grandioses et des moments de contemplation.",
+      "lieu": "Labé / Pita",
+      "activites": [
+        "🌊 <strong>Visite des sources du fleuve Niger</strong>: Rendez-vous à Faranah pour voir les sources de l'un des plus grands fleuves d'Afrique. C'est un lieu symbolique et paisible, marquant le début d'un long voyage aquatique.",
+        "💧 <strong>Découverte des Chutes de Kinkon</strong>: Admirez la puissance de ces chutes spectaculaires, l'une des plus impressionnantes de Guinée. Le site offre des vues magnifiques et la possibilité de se rafraîchir.",
+        "🚶‍♂️ <strong>Balade autour des chutes et pique-nique</strong>: Profitez des environs des chutes pour une promenade relaxante et un pique-nique au bord de l'eau, au son des cascades."
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🚗",
+          "titre": "Accès",
+          "texte": "L'accès aux sources du Niger et aux chutes de Kinkon peut nécessiter un véhicule 4x4, surtout en saison des pluies."
+        },
+        {
+          "symbole": "♻️",
+          "titre": "Environnement",
+          "texte": "Veillez à ne laisser aucun déchet derrière vous pour préserver la beauté naturelle de ces sites."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🛣️",
+      "titre": "Retour vers la côte via Mamou",
+      "legende": "Le voyage entame son chemin de retour vers la côte, avec une étape à Mamou, une ville carrefour importante. C'est l'occasion de traverser de nouveaux paysages et de ressentir l'évolution de l'ambiance à mesure que l'on quitte les montagnes. Une journée de transition, ponctuée par la découverte d'un marché local.",
+      "lieu": "Mamou",
+      "activites": [
+        "🚗 <strong>Trajet de Labé à Mamou</strong>: Environ 3-4 heures de route. Mamou est une ville animée, un point de convergence pour les commerçants et les voyageurs.",
+        "🛏️ <strong>Installation à l'hôtel à Mamou</strong>: Prenez le temps de vous reposer après le trajet. Mamou offre des options d'hébergement simples mais confortables.",
+        "🛍️ <strong>Visite du marché de Mamou</strong>: Explorez le marché local, moins touristique que ceux de Conakry ou Labé, pour une immersion authentique dans la vie quotidienne guinéenne."
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "⛽",
+          "titre": "Carburant",
+          "texte": "Mamou est un bon point pour faire le plein de carburant et de provisions avant de continuer vers Conakry."
+        },
+        {
+          "symbole": "🍲",
+          "titre": "Cuisine locale",
+          "texte": "Profitez de Mamou pour goûter des plats locaux dans de petits restaurants de rue, souvent délicieux et économiques."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "🛣️",
+      "titre": "Retour à Conakry et détente",
+      "legende": "Le long trajet de retour vers Conakry marque la fin de l'exploration du Fouta Djallon. Après l'arrivée, la journée sera dédiée à la détente et à la préparation des derniers jours. C'est l'occasion de se remémorer les aventures vécues et de profiter d'un moment de calme avant de reprendre le rythme de la capitale.",
+      "lieu": "Conakry",
+      "activites": [
+        "🚗 <strong>Long trajet de Mamou à Conakry</strong>: Environ 5-6 heures de route. Prévoyez des pauses régulières pour vous dégourdir les jambes et admirer les paysages.",
+        "🛏️ <strong>Installation à l'hôtel à Conakry</strong>: Retrouvez le confort de la capitale et installez-vous dans votre hébergement pour les dernières nuits.",
+        "💆‍♀️ <strong>Soirée libre et détente</strong>: Profitez d'une soirée tranquille à l'hôtel ou dans un restaurant calme pour vous reposer et vous préparer aux dernières découvertes."
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "📚",
+          "titre": "Lecture",
+          "texte": "Prévoyez un livre ou de la musique pour les longs trajets en voiture."
+        },
+        {
+          "symbole": "🔋",
+          "titre": "Recharge",
+          "texte": "Profitez de l'hôtel pour recharger tous vos appareils électroniques."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": " cultural_heritage",
+      "titre": "Art et culture à Conakry",
+      "legende": "Cette journée est consacrée à l'approfondissement de la scène artistique et culturelle de Conakry. De l'artisanat local aux galeries d'art, la ville révèle son dynamisme créatif. C'est l'occasion de trouver des souvenirs uniques et de rencontrer des artistes locaux, tout en profitant de l'ambiance de la capitale.",
+      "lieu": "Conakry",
+      "activites": [
+        "🎨 <strong>Visite du Centre Culturel Franco-Guinéen</strong>: Découvrez les expositions d'art local, assistez à des spectacles ou participez à des ateliers. C'est un lieu vibrant d'échanges culturels.",
+        "🛍️ <strong>Shopping d'artisanat au marché de N'Zérékoré</strong>: Moins connu que Madina, ce marché offre une sélection intéressante d'artisanat, notamment des sculptures sur bois, des masques et des bijoux.",
+        "🎶 <strong>Soirée musique live ou danse traditionnelle</strong>: Si possible, assistez à un concert de musique guinéenne ou à une représentation de danse traditionnelle pour une immersion complète dans la culture locale."
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "🎭",
+          "titre": "Événements",
+          "texte": "Renseignez-vous sur les événements culturels en cours au Centre Culturel Franco-Guinéen ou auprès de votre hôtel."
+        },
+        {
+          "symbole": "💰",
+          "titre": "Achats",
+          "texte": "Prévoyez de la monnaie locale pour les achats d'artisanat, les petits commerçants préfèrent le liquide."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "🍽️",
+      "titre": "Derniers plaisirs guinéens et préparation au départ",
+      "legende": "Profitez de cette dernière journée complète pour savourer les saveurs locales, faire les derniers achats et vous imprégner une dernière fois de l'ambiance de Conakry. C'est aussi le moment de préparer tranquillement votre départ, en vous assurant que tout est prêt pour le voyage de retour. Une journée douce pour clore ce magnifique périple.",
+      "lieu": "Conakry",
+      "activites": [
+        "🍽️ <strong>Déjeuner dans un restaurant local réputé</strong>: Goûtez une dernière fois aux spécialités guinéennes comme le riz gras, le poulet yassa ou le foutou. Demandez des recommandations à votre hôtel.",
+        "🛍️ <strong>Derniers achats de souvenirs ou de produits locaux</strong>: Flânez dans les boutiques ou les marchés pour trouver les derniers cadeaux ou des épices à rapporter chez vous.",
+        "📦 <strong>Préparation des bagages et soirée libre</strong>: Organisez vos affaires pour le départ. Profitez d'une dernière soirée tranquille, peut-être avec un dîner d'adieu."
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "🌶️",
+          "titre": "Gastronomie",
+          "texte": "N'hésitez pas à demander si les plats sont épicés si vous n'êtes pas habitué aux saveurs fortes."
+        },
+        {
+          "symbole": "✈️",
+          "titre": "Confirmation vol",
+          "texte": "Confirmez les détails de votre vol de retour et l'heure de votre transfert vers l'aéroport."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🛫",
+      "titre": "Départ de Conakry",
+      "legende": "C'est le jour du départ, marquant la fin de votre aventure guinéenne. Après un dernier petit-déjeuner, un transfert vous conduira à l'aéroport. Emportez avec vous les souvenirs inoubliables des paysages, des rencontres et de la culture vibrante de la Guinée. Un voyage riche en émotions et en découvertes s'achève.",
+      "lieu": "Conakry",
+      "activites": [
+        "🍳 <strong>Petit-déjeuner à l'hôtel</strong>: Profitez d'un dernier repas guinéen avant de prendre la route pour l'aéroport.",
+        "🚗 <strong>Transfert vers l'aéroport international de Conakry (CKY)</strong>: Un chauffeur vous conduira à l'aéroport en fonction de l'heure de votre vol. Prévoyez une marge de temps suffisante.",
+        "🛫 <strong>Enregistrement et vol retour</strong>: Effectuez les formalités d'enregistrement et embarquez pour votre vol de retour, la tête pleine de souvenirs."
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Heure de départ",
+          "texte": "Arrivez à l'aéroport au moins 3 heures avant l'heure de votre vol international."
+        },
+        {
+          "symbole": "🛂",
+          "titre": "Documents",
+          "texte": "Assurez-vous d'avoir tous vos documents de voyage (passeport, visa, billet d'avion) à portée de main."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1500€/pers (Vol aller-retour Michel, Mexique - Conakry en classe économique avec escales)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "750€/pers (Location de voiture avec chauffeur pour 12 jours, taxis locaux, transferts aéroport)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "375€/pers (15 jours x 25€/jour pour repas dans restaurants de gamme moyenne)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "975€/pers (15 nuits x 65€/nuit en hôtels 3 étoiles)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "300€/pers (Entrées sites, guides locaux, excursions îles de Loos)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de novembre à avril, correspondant à la saison sèche.",
+      "symbole": "☀️"
+    },
+    {
+      "titre": "Janvier offre un climat agréable, avec des températures modérées et peu de précipitations, idéal pour l'exploration.",
+      "symbole": "🌡️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La Guinée est un pays d'Afrique de l'Ouest, riche en ressources naturelles et en diversité ethnique. La population est majoritairement jeune et très accueillante.",
+      "symbole": "🌍"
+    },
+    {
+      "titre": "La langue officielle est le français, mais de nombreuses langues locales sont parlées, notamment le Pular, le Malinké et le Soussou.",
+      "symbole": "🗣️"
+    },
+    {
+      "titre": "Le Franc Guinéen (GNF) est la monnaie locale. Les cartes de crédit sont rarement acceptées en dehors des grands hôtels de Conakry. Prévoyez du liquide.",
+      "symbole": "💰"
+    },
+    {
+      "titre": "Un visa est obligatoire pour entrer en Guinée. Il doit être obtenu avant le départ auprès de l'ambassade ou du consulat de Guinée.",
+      "symbole": "🛂"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Conseils aux voyageurs pour la Guinée",
+      "titre": "Ministère de l'Europe et des Affaires étrangères",
+      "url": "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/pays/guinee/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Prévisions météo pour Conakry",
+      "titre": "Météo France International",
+      "url": "https://www.meteofrance.com/previsions-meteo-monde/conakry/GNXX0001",
+      "symbole": "🌤️"
+    }
+  ]
+}
